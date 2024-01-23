@@ -4,11 +4,11 @@ class Links extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <a>Home</a>
+      <>
+        <a className="link">Home</a>
         <a>About Us</a>
         <a>Products</a>
-      </div>
+      </>
     );
   }
 }

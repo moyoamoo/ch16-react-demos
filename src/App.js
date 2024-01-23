@@ -1,16 +1,15 @@
 import React, { Component } from "react";
-import Header from "./Components/Header";
-import Main from "./Components/Main";
-import Footer from "./Components/Footer";
+import Button from "./Components/Button";
 
 class App extends Component {
+  state = {};
   render() {
     return (
-      <div>
-        <Header />
-        <Main />
-        <Footer />
-      </div>
+      <>
+        <Button text={"Button 1"} className="important" />
+        <Button text={"Button 2"} className="danger" />
+        <Button text={"Button 3"} className="demo" />
+      </>
     );
   }
 }
