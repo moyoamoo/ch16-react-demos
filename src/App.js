@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 
-class App  extends Component {
-  btnClick = ()=>{
-    console.log("button clicked")
-  }
+class App extends Component {
+  state = { count:1  } 
 
-  onTextInput = (e)=>{
-    console.log("user types: ", e.target.value)
+  onCountClick = ()=>{
+    console.log("click")
+    this.setState({count: this.state.count + 1})
   }
   render() { 
-    return (<>
-    <button onClick={this.btnClick}>Click me</button>
-    <input type="text" onInput={this.onTextInput}></input></>);
+
+    const {count} = this.state;
+    return (<p onClick={this.onCountClick}>{count}</p>);
   }
 }
  
-export default App ;
+export default App;
