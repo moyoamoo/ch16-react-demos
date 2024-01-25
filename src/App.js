@@ -5,10 +5,10 @@ class App extends Component {
 
   onCountClick = ()=>{
     console.log("click")
-    this.setState({count: this.state.count + 1})
+    this.setState({count: this.state.count + 1, clicked: true})
   }
   render() { 
-
+    console.log(this.state)
     const {count} = this.state;
     return (<p onClick={this.onCountClick}>{count}</p>);
   }
